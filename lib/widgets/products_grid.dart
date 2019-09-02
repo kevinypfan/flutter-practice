@@ -20,12 +20,13 @@ class ProductsGrid extends StatelessWidget {
         child: ProductItem(),
       ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3 / 3,
-          // width spacing
-          crossAxisSpacing: 10,
-          // height spacing
-          mainAxisSpacing: 10),
+        crossAxisCount: 2,
+        childAspectRatio: 3 / 3,
+        // width spacing
+        crossAxisSpacing: 8,
+        // height spacing
+        mainAxisSpacing: 8,
+      ),
     );
   }
 }
