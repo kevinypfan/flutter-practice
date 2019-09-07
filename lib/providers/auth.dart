@@ -29,12 +29,15 @@ class Auth with ChangeNotifier {
     return null;
   }
 
-  void logout() {
+  Future<void> logout() async {
     _token = null;
     _userId = null;
     _expiryDate = null;
     _authTimer.cancel();
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    // prefs.remove('userData');
+    prefs.clear();
   }
 
   void _autoLogout() {
